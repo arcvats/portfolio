@@ -1,0 +1,57 @@
+.intro.hero {
+    /* background: #7B00B9; */
+    background: #001B40;
+    color: #DDDDDD;
+}
+
+.intro .container{
+    text-align: center;
+}
+
+.intro .container .icons {
+    font-size: 3em;
+}
+
+.intro .icons svg{
+    margin: 1rem;
+}
+
+.intro .title {
+    color: #DDDDDD;
+    font-family: 'Alegreya', serif;
+    font-size: 4em;
+}
+
+.intro .subtitle{
+    color: #DDDDDD;
+    font-family: 'Quicksand', serif;
+    font-size: 1.3em;
+}
+
+.intro .subtitle a{
+    color: #5EDCFF;
+    font-weight: bold;
+}
+
+.intro .scroll a{
+    color: #5EDCFF;
+    font-size: 3em;
+}
+
+.intro nav.navbar .navbar-end a{
+    color: #DDDDDD;
+    font-family: 'Kalam', cursive;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.intro nav.navbar .navbar-end a:hover{
+    color: #5EDCFF;
+    background: none;
+}
+
+.intro .hero-foot p{
+    text-align: center;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+}

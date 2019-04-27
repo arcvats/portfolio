@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya:900');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Kalam:400,700');
+
+.social-media{
+    position: fixed;
+    top: 50%;
+    right: 5px;
+}
+
+.social-media p a{
+    color: #fff;
+    font-size: 2em;
+}

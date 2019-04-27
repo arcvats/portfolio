@@ -1,0 +1,35 @@
+.story.hero {
+    background:#40476D;
+    color: #fff;
+}
+
+.story .hero-head p{
+    text-align: center;
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+}
+
+.story .hero-body h1{
+    font-family: "Alegreya", serif;
+    color: #fff;
+    font-size: 2em;
+}
+
+.story .hero-body p{
+    font-family: "Quicksand", serif;
+    color: #fff;
+    font-size: 1em;
+    text-align: justify;
+}
+
+.story .box{
+    float: left;
+    margin:1em 1em 1em 0;
+    color: #000;
+    width: 300px;
+}
+
+.story .box p{
+    color: #000;
+    font-size: 12px;
+}
