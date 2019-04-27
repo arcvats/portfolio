@@ -51,12 +51,14 @@ export default function Intro() {
               <a
                 href="https://github.com/arcvats"
                 className="navbar-item is-hidden-desktop"
+                aria-hidden="true"
               >
                 <i className="fab fa-github" />
               </a>
               <a
                 href="https://linkedin.com/in/arcvats"
                 className="navbar-item is-hidden-desktop"
+                aria-hidden="true"
               >
                 <i className="fab fa-linkedin" />
               </a>

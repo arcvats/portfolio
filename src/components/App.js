@@ -14,13 +14,19 @@ export default function App() {
       <Story />
       <div className="social-media is-hidden-mobile">
         <p>
-          <a href="https://github.com/arcvats">
+          <a
+            href="https://github.com/arcvats"
+            aria-label="Link to Github profile"
+          >
             <i className="fab fa-github" />
           </a>
         </p>
 
         <p>
-          <a href="https://linkedin.com/in/arcvats">
+          <a
+            href="https://linkedin.com/in/arcvats"
+            aria-label="Link to Linkedin profile"
+          >
             <i className="fab fa-linkedin" />
           </a>
         </p>
