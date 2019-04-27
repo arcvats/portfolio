@@ -1,5 +1,4 @@
 .intro.hero {
-    /* background: #7B00B9; */
     background: #001B40;
     color: #DDDDDD;
 }
@@ -55,3 +54,38 @@
     font-family: "Kalam", cursive;
     font-weight: 400;
 }
+
+.intro .navbar-burger,
+.intro .navbar-burger.is-active {
+    color: #fff;
+}
+
+.intro nav .navbar-menu.is-active{
+    background:#001B40;
+    text-align: center;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;  
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}  
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@media only screen and (max-width: 600px) {
+    .intro .container .icons {
+        font-size: 2em;
+    }
+    
+    .intro .title {
+        font-size: 3em;
+    }
+    
+    .intro .subtitle{
+        font-size: 1.1em;
+    }
+} 

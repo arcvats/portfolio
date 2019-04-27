@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./Intro.css";
 
 export default function Intro() {
+  const [active, setActive] = useState(false);
+  const toggleActive = () => {
+    setActive(!active);
+  };
   return (
     <section className="hero intro is-fullheight">
       <div className="hero-head">
@@ -19,17 +23,18 @@ export default function Intro() {
 
             <a
               role="button"
-              className="navbar-burger"
+              className={`navbar-burger ${active ? "is-active" : ""}`}
               aria-label="menu"
               aria-expanded="false"
               href="/#"
+              onClick={toggleActive}
             >
               <span aria-hidden="true" />
               <span aria-hidden="true" />
               <span aria-hidden="true" />
             </a>
           </div>
-          <div className="navbar-menu">
+          <div className={`navbar-menu ${active ? "is-active" : ""}`}>
             <div className="navbar-end">
               <a href="/#" className="navbar-item">
                 Projects

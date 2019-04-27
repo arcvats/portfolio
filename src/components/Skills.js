@@ -28,7 +28,7 @@ export default function Skills() {
                 <h2>Frameworks & Tools</h2>
                 <Carousel
                   fields={frameworks}
-                  options={{ isAuto: true, time: 2000, columns: 5 }}
+                  options={{ isAuto: true, time: 2000, columns: 4 }}
                 />
               </div>
               <div className="tile is-child box">
@@ -39,6 +39,40 @@ export default function Skills() {
             <div className="tile is-parent is-vertical">
               <div className="tile is-child box">
                 <h2>Other Skills</h2>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <i className="fas fa-sitemap" />
+                      </td>
+                      <td>Data Structures & Algorithms</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i className="fas fa-layer-group" />
+                      </td>
+                      <td>System Design</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i className="fas fa-cogs" />
+                      </td>
+                      <td>Operating Systems</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i className="fas fa-language" />
+                      </td>
+                      <td>Compilers & Interpreters</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i className="fas fa-puzzle-piece" />
+                      </td>
+                      <td>Design Patterns</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -46,27 +80,13 @@ export default function Skills() {
           <div className="tile is-ancestor organizations">
             <div className="tile is-parent is-vertical">
               <div className="is-child box">
-                <div className="columns">
-                  <figure className="column is-one-third">
+                <div className="columns is-flex-mobile">
+                  <figure className="column is-half">
                     <img src="/images/isoc.png" alt="Internet Society" />
                   </figure>
-                  <p className="column">
-                    something asdfadsfasdf asdfasdfasdf asdfasdfas asdfasdfasdf
-                    asdfasdfasdf asdfasdfasdf asdfasdfasdf
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="tile is-parent is-vertical">
-              <div className="is-child box">
-                <div className="columns">
-                  <figure className="column is-one-third">
+                  <figure className="column is-half">
                     <img src="/images/osi.png" alt="Open Source Initiative" />
                   </figure>
-                  <p className="column">
-                    something asdfadsfasdf asdfasdfasdf asdfasdfas asdfasdfasdf
-                    asdfasdfasdf asdfasdfasdf asdfasdfasdf
-                  </p>
                 </div>
               </div>
             </div>

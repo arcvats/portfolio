@@ -21,7 +21,6 @@ export const frameworks = [
   { name: "Webpack(C)", src: "/images/webpack.svg" },
   { name: "Mocha(C)", src: "/images/mocha.svg" },
   { name: "Socket.IO(C)", src: "/images/socketio.svg" },
-  { name: "Moment.js(C)", src: "/images/momentjs.svg" },
   { name: "Lodash(G)", src: "/images/lodash.svg" }
 ];
 
