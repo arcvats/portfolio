@@ -6,6 +6,11 @@ import { languages, databases, frameworks, others } from "./SkillsHelper";
 export default function Skills() {
   return (
     <section className="hero skills is-fullheight" id="skills">
+      <div className="hero-head">
+        <p>
+          Legend(for the image caption): G(Good), C(Comfortable), F(Familiar)
+        </p>
+      </div>
       <div className="hero-body">
         <div className="container">
           <h1>Technologies I Know.</h1>
@@ -92,11 +97,6 @@ export default function Skills() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="hero-foot">
-        <p>
-          Legend(for the image caption): G(Good), C(Comfortable), F(Familiar)
-        </p>
       </div>
     </section>
   );

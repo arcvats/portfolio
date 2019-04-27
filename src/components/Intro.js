@@ -36,9 +36,9 @@ export default function Intro() {
           </div>
           <div className={`navbar-menu ${active ? "is-active" : ""}`}>
             <div className="navbar-end">
-              <a href="/#" className="navbar-item">
+              <Link className="navbar-item" to="projects" smooth={true}>
                 Projects
-              </a>
+              </Link>
               <Link className="navbar-item" to="skills" smooth={true}>
                 Skills
               </Link>
@@ -47,6 +47,18 @@ export default function Intro() {
               </Link>
               <a href="/#" className="navbar-item">
                 Contact
+              </a>
+              <a
+                href="https://github.com/arcvats"
+                className="navbar-item is-hidden-desktop"
+              >
+                <i className="fab fa-github" />
+              </a>
+              <a
+                href="https://linkedin.com/in/arcvats"
+                className="navbar-item is-hidden-desktop"
+              >
+                <i className="fab fa-linkedin" />
               </a>
             </div>
           </div>
@@ -82,7 +94,7 @@ export default function Intro() {
             <br />
           </h2>
           <div className="scroll">
-            <Link to="skills" smooth={true}>
+            <Link to="projects" smooth={true}>
               <i className="fas fa-chevron-circle-down" />
             </Link>
           </div>
