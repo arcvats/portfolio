@@ -2,6 +2,8 @@ import React from "react";
 import "./Skills.css";
 import Carousel from "./Carousel";
 import { languages, databases, frameworks, others } from "./SkillsHelper";
+import LazyLoad from "react-lazyload";
+import Placeholder from "./Placeholder";
 
 export default function Skills() {
   return (
@@ -87,10 +89,14 @@ export default function Skills() {
               <div className="is-child box">
                 <div className="columns is-flex-mobile">
                   <figure className="column is-half">
-                    <img src="/images/isoc.png" alt="Internet Society" />
+                    <LazyLoad placeholder={<Placeholder />} once>
+                      <img src="/images/isoc.png" alt="Internet Society" />
+                    </LazyLoad>
                   </figure>
                   <figure className="column is-half">
-                    <img src="/images/osi.png" alt="Open Source Initiative" />
+                    <LazyLoad placeholder={<Placeholder />} once>
+                      <img src="/images/osi.png" alt="Open Source Initiative" />
+                    </LazyLoad>
                   </figure>
                 </div>
               </div>

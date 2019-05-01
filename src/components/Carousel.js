@@ -1,4 +1,6 @@
 import React, { useState, useLayoutEffect } from "react";
+import LazyLoad from "react-lazyload";
+import Placeholder from "./Placeholder";
 
 export default function Carousel(props) {
   const [count, setCount] = useState(0);
@@ -35,7 +37,9 @@ export default function Carousel(props) {
     .map((ele, index) => {
       return (
         <div className="tech column" key={index}>
-          <img src={ele.src} alt={ele.name} />
+          <LazyLoad placeholder={<Placeholder />} once>
+            <img src={ele.src} alt={ele.name} />
+          </LazyLoad>
           <p>{ele.name}</p>
         </div>
       );
