@@ -15,6 +15,11 @@
     margin: 1rem;
 }
 
+.intro .icons svg:hover{
+    transition: all 0.4s ease-in-out;
+    transform: translateY(-10px) translateX(-5px) scale(1.2);
+}
+
 .intro .title {
     color: #DDDDDD;
     font-family: 'Alegreya', serif;
@@ -35,6 +40,10 @@
 .intro .scroll a{
     color: #5EDCFF;
     font-size: 3em;
+}
+
+.intro nav.navbar .navbar-brand span.navbar-item{
+    cursor: pointer;
 }
 
 .intro nav.navbar .navbar-end a{

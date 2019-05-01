@@ -33,16 +33,6 @@ export default function Story() {
             are a reader. Now, we can move on to my story and where it all
             started.
           </p>
-          {/* <div className="box">
-            <h2>Fun Fact(Logo)</h2>
-            <p>
-              The logo has a "V" and two arcs crossing each other. If you flip
-              the logo upside down, you will find an "A". Two straight lines
-              forming a "V" represents direction and focus. The arcs represent
-              flexibility and adaptability. It is also symmetrical which
-              represents balance.
-            </p>
-          </div> */}
           <p>
             It was a nice summer evening, I was sitting in front of my computer
             and playing some first person shooting game when my uncle came home
