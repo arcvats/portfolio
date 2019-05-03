@@ -6,11 +6,13 @@ export default function Contact() {
   const [isEmailValid, setIsEmailValid] = useState(false);
   const [isMessageValid, setIsMessageValid] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
+  const [status, setStatus] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
+
   const handleInputs = e => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -22,10 +24,15 @@ export default function Contact() {
     axios
       .post("/.netlify/functions/mailer", formData)
       .then(data => {
-        console.log(data);
+        if (data.status === 200) {
+          setStatus(1);
+        }
+        if (data.status === 400) {
+          setStatus(2);
+        }
       })
       .catch(err => {
-        console.log(err);
+        setStatus(2);
       });
   };
 
@@ -50,75 +57,100 @@ export default function Contact() {
     }
   }, [email, message.length]);
 
+  const form = (
+    <form className="contact-form">
+      <div className="field">
+        <div className="control">
+          <input
+            className="input is-large"
+            type="text"
+            placeholder="Name"
+            onChange={handleInputs}
+            name="name"
+            value={name}
+          />
+        </div>
+      </div>
+      <div className="field">
+        <div className="control">
+          <input
+            className="input is-large"
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={email}
+            onChange={handleInputs}
+          />
+        </div>
+        <p className={isEmailValid ? "is-hidden" : "help is-danger"}>
+          Email should be like "example@example.com".
+        </p>
+      </div>
+      <div className="field">
+        <div className="control">
+          <textarea
+            className="textarea is-large"
+            placeholder="Message"
+            name="message"
+            value={message}
+            onChange={handleInputs}
+          />
+        </div>
+        <p className={isMessageValid ? "is-hidden" : "help is-danger"}>
+          Message is required.
+        </p>
+      </div>
+      <div className="field">
+        <div className="control">
+          <button
+            className={`button is-link is-outlined is-fullwidth is-medium ${
+              isFormValid ? "" : "is-disabled"
+            }`}
+            disabled={isFormValid ? "" : "disabled"}
+            onClick={handleSubmit}
+          >
+            SEND MESSAGE <i className="fas fa-paper-plane" />
+          </button>
+        </div>
+      </div>
+    </form>
+  );
+
+  const success = (
+    <h1 class="successful">Thankyou! Your message was sent successfully.</h1>
+  );
+
+  const fail = (
+    <h1 className="wentwrong">
+      Sorry, something went wrong. <br />
+      Please refresh the page and try again or you can contact me via linkedIn.
+    </h1>
+  );
+
   return (
     <section className="hero is-fullheight contact" id="contact">
       <div className="hero-body">
         <div className="container">
           <h1>Say Hi!</h1>
-          <p>thanks</p>
           <div className="columns is-centered">
             <div className="column is-half">
-              <form className="contact-form">
-                <div className="field">
-                  <div className="control">
-                    <input
-                      className="input is-large"
-                      type="text"
-                      placeholder="Name"
-                      onChange={handleInputs}
-                      name="name"
-                      value={name}
-                    />
-                  </div>
-                </div>
-                <div className="field">
-                  <div className="control">
-                    <input
-                      className="input is-large"
-                      type="email"
-                      name="email"
-                      placeholder="Email"
-                      value={email}
-                      onChange={handleInputs}
-                    />
-                  </div>
-                  <p className={isEmailValid ? "is-hidden" : "help is-danger"}>
-                    Email should be like "example@example.com".
-                  </p>
-                </div>
-                <div className="field">
-                  <div className="control">
-                    <textarea
-                      className="textarea is-large"
-                      placeholder="Message"
-                      name="message"
-                      value={message}
-                      onChange={handleInputs}
-                    />
-                  </div>
-                  <p
-                    className={isMessageValid ? "is-hidden" : "help is-danger"}
-                  >
-                    Message is required.
-                  </p>
-                </div>
-                <div className="field">
-                  <div className="control">
-                    <button
-                      className={`button is-link is-outlined is-fullwidth is-medium ${
-                        isFormValid ? "" : "is-disabled"
-                      }`}
-                      disabled={isFormValid ? "" : "disabled"}
-                      onClick={handleSubmit}
-                    >
-                      SEND MESSAGE <i className="fas fa-paper-plane" />
-                    </button>
-                  </div>
-                </div>
-              </form>
+              <p>
+                Thank you for visiting. I hope you liked my portfolio. If you
+                have any suggestions for me, or just want to say "Hello", please
+                send me a message by filling the given contact form.{" "}
+              </p>
+              {status === 0 ? form : status === 1 ? success : fail}
             </div>
           </div>
         </div>
+      </div>
+      <div className="hero-foot">
+        <p className="is-centered">
+          Built with React <i className="fab fa-react" />, Node{" "}
+          <i className="fab fa-node-js" />, Bulma{" "}
+          <i className="fab fa-css3-alt" />, AWS Lambda{" "}
+          <i className="fab fa-aws" /> and Netlify.
+        </p>
       </div>
     </section>
   );
