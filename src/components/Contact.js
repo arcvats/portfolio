@@ -109,7 +109,7 @@ export default function Contact() {
                         isFormValid ? "" : "is-disabled"
                       }`}
                       disabled={isFormValid ? "" : "disabled"}
-                      onSubmit={handleSubmit}
+                      onClick={handleSubmit}
                     >
                       SEND MESSAGE <i className="fas fa-paper-plane" />
                     </button>

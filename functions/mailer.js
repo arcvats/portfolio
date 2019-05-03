@@ -1,21 +1,22 @@
 const sgMail = require("@sendgrid/mail");
 
-function validate(body) {
+function validate(data) {
   return (
-    body.email.match(
+    data.email.match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    ) && body.message
+    ) && data.message
   );
 }
 
 exports.handler = function(event, context, callback) {
-  if (validate(event.body)) {
+    const data = JSON.parse(event.body);
+  if (validate(data)) {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
       to: "archit5793@gmail.com",
-      from: event.body.email,
-      subject: event.body.name || "Anonymous",
-      text: event.body.message
+      from: data.email,
+      subject: data.name || "Anonymous",
+      text: data.message
     };
     sgMail.send(msg);
     callback(null, {
