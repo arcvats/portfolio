@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Placeholder from "./Placeholder";
 import "./Contact.css";
 
 export default function Contact() {
@@ -21,18 +22,19 @@ export default function Contact() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    setStatus(1);
     axios
       .post("/.netlify/functions/mailer", formData)
       .then(data => {
         if (data.status === 200) {
-          setStatus(1);
+          setStatus(2);
         }
         if (data.status === 400) {
-          setStatus(2);
+          setStatus(3);
         }
       })
       .catch(err => {
-        setStatus(2);
+        setStatus(3);
       });
   };
 
@@ -127,6 +129,18 @@ export default function Contact() {
     </h1>
   );
 
+  const getField = () => {
+    if (status === 0) {
+      return form;
+    } else if (status === 1) {
+      return <Placeholder />;
+    } else if (status === 2) {
+      return success;
+    } else {
+      return fail;
+    }
+  };
+
   return (
     <section className="hero is-fullheight contact" id="contact">
       <div className="hero-body">
@@ -137,9 +151,9 @@ export default function Contact() {
               <p>
                 Thank you for visiting. I hope you liked my portfolio. If you
                 have any suggestions for me, or just want to say "Hello", please
-                send me a message by filling the given contact form.{" "}
+                send me a message by filling the contact form.{" "}
               </p>
-              {status === 0 ? form : status === 1 ? success : fail}
+              {getField()}
             </div>
           </div>
         </div>
@@ -149,7 +163,15 @@ export default function Contact() {
           Built with React <i className="fab fa-react" />, Node{" "}
           <i className="fab fa-node-js" />, Bulma{" "}
           <i className="fab fa-css3-alt" />, AWS Lambda{" "}
-          <i className="fab fa-aws" /> and Netlify.
+          <i className="fab fa-aws" /> and Netlify.{" "}
+          <span className="contact-mobile is-hidden-desktop">
+            <a href="https://linkedin.com/in/arcvats" aria-label="linked in">
+              <i className="fab fa-linkedin" />
+            </a>{" "}
+            <a href="https://github.com/arcvats" aria-label="github">
+              <i className="fab fa-github" />
+            </a>
+          </span>
         </p>
       </div>
     </section>

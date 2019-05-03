@@ -79,6 +79,8 @@
 .contact p.help{
     text-align: left;
     color:#f05757;
+    font-weight: normal;
+    font-size: 1rem;
 }
 
 .contact .successful {
@@ -96,4 +98,9 @@
     font-family: "Kalam", cursive;
     color: #457B9D;
     font-size: 1rem;
+}
+
+.contact .hero-foot span a{
+    font-size: 1em;
+    color: #5EDCFF;
 }
