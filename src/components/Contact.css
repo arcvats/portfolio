@@ -104,3 +104,11 @@
     font-size: 1em;
     color: #5EDCFF;
 }
+
+.contact .placeholder-loading {
+    text-align: center;
+}
+
+.contact .placeholder-loading img{
+    width: 200px;
+}

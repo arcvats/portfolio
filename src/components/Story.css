@@ -21,3 +21,8 @@
     font-size: 1em;
     text-align: justify;
 }
+
+code{
+    background: transparent;
+    color: #fff;
+}

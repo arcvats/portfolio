@@ -133,7 +133,11 @@ export default function Contact() {
     if (status === 0) {
       return form;
     } else if (status === 1) {
-      return <Placeholder />;
+      return (
+        <div className="placeholder-loading">
+          <Placeholder />
+        </div>
+      );
     } else if (status === 2) {
       return success;
     } else {
@@ -150,8 +154,8 @@ export default function Contact() {
             <div className="column is-half">
               <p>
                 Thank you for visiting. I hope you liked my portfolio. If you
-                have any suggestions for me, or just want to say "Hello", please
-                send me a message by filling the contact form.{" "}
+                have any suggestions, or want to say "Hello", please send me a
+                message by filling the contact form.{" "}
               </p>
               {getField()}
             </div>
