@@ -48,8 +48,8 @@ export default function Projects() {
                   <h2>securebox-dashboard</h2>
                   <p>
                     Dashboard for securebox toolkit. Displays graphs for
-                    different parameters, shows audit information, traces,
-                    anomalies and function benchmarks.
+                    different params, shows audit, traces, anomalies and
+                    function benchmarks.
                   </p>
                   <div className="project-foot">
                     <div className="columns is-flex-mobile">

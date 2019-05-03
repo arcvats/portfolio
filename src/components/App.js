@@ -3,6 +3,7 @@ import Intro from "./Intro";
 import Skills from "./Skills";
 import Story from "./Story";
 import Projects from "./Projects";
+import Contact from "./Contact";
 import "./App.css";
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
       <Projects />
       <Skills />
       <Story />
+      <Contact />
       <div className="social-media is-hidden-mobile">
         <p>
           <a

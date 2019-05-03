@@ -1,0 +1,81 @@
+.contact.hero {
+    background: #001B40;
+    color: #DDDDDD;
+}
+
+.contact h1{
+    font-family: "Alegreya", serif;
+    font-size: 2em;
+    text-align: center;
+}
+
+.contact p{
+    font-family: "Quicksand", serif;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact input{
+    background: transparent;
+    border:1px solid #5EDCFF;
+    color: #DDDDDD;
+}
+
+.contact input:hover{
+    background: transparent;
+    border:1px solid #457B9D;
+}
+
+.contact input::placeholder{
+    color: #457B9D;
+    font-size: 1rem;
+    font-family: "Quicksand", serif;
+}
+
+.contact textarea{
+    background: transparent;
+    border:1px solid #5EDCFF;
+    color: #DDDDDD;
+}
+
+.contact textarea:hover{
+    background: transparent;
+    border:1px solid #457B9D;
+}
+
+.contact textarea::placeholder{
+    color: #457B9D;
+    font-size: 1rem;
+    font-family: "Quicksand", serif;
+}
+
+.contact button.button.is-link{
+    color: #457B9D;
+    border: 1px solid rgb(211, 230, 47);
+    font-family: "Kalam", cursive;
+
+}
+
+.contact button.button.is-link.is-disabled{
+    background: transparent;
+    border: 1px solid #f05757;
+    color: #f05757;
+}
+
+.contact button.button.is-link.is-disabled:hover{
+    background: transparent;
+    border: 1px solid #f05757;
+    color: #f05757;
+}
+
+.contact button.button.is-link:hover{
+    background: transparent;
+    border: 1px solid #22c022;
+    color: #22c022;
+}
+
+.contact p.help{
+    text-align: left;
+    color:#f05757;
+}
