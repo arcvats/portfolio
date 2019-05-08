@@ -70,6 +70,7 @@ export default function Contact() {
             onChange={handleInputs}
             name="name"
             value={name}
+            title="Enter name"
           />
         </div>
       </div>
@@ -82,6 +83,7 @@ export default function Contact() {
             placeholder="Email"
             value={email}
             onChange={handleInputs}
+            title="Enter email"
           />
         </div>
         <p className={isEmailValid ? "is-hidden" : "help is-danger"}>
@@ -96,6 +98,7 @@ export default function Contact() {
             name="message"
             value={message}
             onChange={handleInputs}
+            title="Enter message"
           />
         </div>
         <p className={isMessageValid ? "is-hidden" : "help is-danger"}>
@@ -110,6 +113,7 @@ export default function Contact() {
             }`}
             disabled={isFormValid ? "" : "disabled"}
             onClick={handleSubmit}
+            title="Send message"
           >
             SEND MESSAGE <i className="fas fa-paper-plane" />
           </button>
@@ -154,7 +158,7 @@ export default function Contact() {
             <div className="column is-half">
               <p>
                 Thank you for visiting. I hope you liked my portfolio. If you
-                have any suggestions, or want to say "Hello", please send me a
+                have any suggestions or want to say "Hello", please send me a
                 message by filling the contact form.{" "}
               </p>
               {getField()}

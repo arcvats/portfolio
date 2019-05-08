@@ -95,11 +95,8 @@ export default function Intro() {
             <br />
             That was an Ice Breaker! Cool, You are still reading. I can tell you
             more about me then. <br />
-            I'm an{" "}
-            <Link to="story" smooth={true}>
-              INTJ (you can click if you want)
-            </Link>
-            , loves reading, travelling, playing guitar and ... I forgot.
+            I'm an INTJ, loves reading, travelling, playing guitar and ... I
+            forgot.
             <br />
             Did you just ask about my passion? I can define it in two words,
             <b>"Web Development"</b>. <br />
