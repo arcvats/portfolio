@@ -4,8 +4,6 @@ import Placeholder from "./Placeholder";
 import "./Contact.css";
 
 export default function Contact() {
-  const [isEmailValid, setIsEmailValid] = useState(false);
-  const [isMessageValid, setIsMessageValid] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
   const [status, setStatus] = useState(0);
   const [formData, setFormData] = useState({
@@ -42,16 +40,6 @@ export default function Contact() {
     const isValidEmail = email.match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
-    if (isValidEmail) {
-      setIsEmailValid(true);
-    } else {
-      setIsEmailValid(false);
-    }
-    if (message.length) {
-      setIsMessageValid(true);
-    } else {
-      setIsMessageValid(false);
-    }
     if (isValidEmail && message.length) {
       setIsFormValid(true);
     } else {
@@ -80,30 +68,24 @@ export default function Contact() {
             className="input is-large"
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Email (abc@example.com)"
             value={email}
             onChange={handleInputs}
             title="Enter email"
           />
         </div>
-        <p className={isEmailValid ? "is-hidden" : "help is-danger"}>
-          Email should be like "example@example.com".
-        </p>
       </div>
       <div className="field">
         <div className="control">
           <textarea
             className="textarea is-large"
-            placeholder="Message"
+            placeholder="Message (Required)"
             name="message"
             value={message}
             onChange={handleInputs}
             title="Enter message"
           />
         </div>
-        <p className={isMessageValid ? "is-hidden" : "help is-danger"}>
-          Message is required.
-        </p>
       </div>
       <div className="field">
         <div className="control">

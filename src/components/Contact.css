@@ -23,6 +23,13 @@
     color: #DDDDDD;
 }
 
+.contact input.input.is-large,
+.contact textarea.textarea.is-large{
+    font-family: "Quicksand", serif;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
+
 .contact input:hover{
     background: transparent;
     border:1px solid #457B9D;
@@ -52,22 +59,22 @@
 }
 
 .contact button.button.is-link{
-    color: #457B9D;
-    border: 1px solid rgb(211, 230, 47);
+    color: #22c022;
+    border: 1px solid #22c022;
     font-family: "Kalam", cursive;
 
 }
 
 .contact button.button.is-link.is-disabled{
     background: transparent;
-    border: 1px solid #f05757;
-    color: #f05757;
+    border: 1px solid #fafafa;
+    color: #fafafa;
 }
 
 .contact button.button.is-link.is-disabled:hover{
     background: transparent;
-    border: 1px solid #f05757;
-    color: #f05757;
+    border: 1px solid #fafafa;
+    color: #fafafa;
 }
 
 .contact button.button.is-link:hover{
