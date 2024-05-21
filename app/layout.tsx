@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 		description:
 			"Welcome to the portfolio of Archit. Explore my projects, skills, and blog.",
 		images: {
-			url: "/profile.jpg",
+			url: "https://arcvats.com/profile.jpg",
 			alt: "Arcvats",
 		},
 	},
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 		description:
 			"Welcome to the portfolio of Archit. Explore my projects, skills, and blog.",
 		images: {
-			url: "/profile.jpg",
+			url: "https://arcvats.com/profile.jpg",
 			alt: "Arcvats",
 		},
 	},

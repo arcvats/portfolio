@@ -10,7 +10,7 @@ export default function Work() {
 				{iconFactory("work", 24)}
 				<span className="font-bold ml-2">Work Experience</span>
 			</h2>
-			{WORK_EXPERIENCE.map((work) => {
+			{WORK_EXPERIENCE.reverse().map((work) => {
 				return (
 					<InfoRow
 						key={work.company}
