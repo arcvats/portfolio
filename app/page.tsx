@@ -2,7 +2,6 @@ import { parse } from "rss-to-json";
 import HeroSection from "./components/organisms/HeroSection";
 import Work from "./components/organisms/Work";
 import Projects from "./components/organisms/Projects";
-import Footer from "./components/organisms/Footer";
 import RecentPosts from "./components/organisms/RecentPosts";
 import { FEED_URL } from "./lib/consts";
 
@@ -49,7 +48,6 @@ export default async function Home() {
 					<Projects />
 				</div>
 			</div>
-			<Footer />
 		</>
 	);
 }

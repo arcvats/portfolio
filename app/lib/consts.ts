@@ -10,7 +10,7 @@ export const NAVIGATION = [
   {
     href: "/about",
     text: "About",
-  }
+  },
 ];
 
 export const SOCIAL_ICONS = [
@@ -20,7 +20,7 @@ export const SOCIAL_ICONS = [
     size: 24
   },
   {
-    url: "https://twitter.com/arcvats",
+    url: "https://x.com/arcvats",
     icon: "twitter",
     size: 21,
   },
@@ -121,5 +121,12 @@ export const PROJECTS = [
   }
 ];
 
+export const PROFILE_IMAGE = "/profile.jpg";
+export const IMAGE_WITH_ATTR = {
+  url: "/meditation.svg",
+  attributionLink: "https://storyset.com/people",
+  attributionText: "People illustrations by Storyset",
+};
+export const BLOG_URL = "https://blog.arcvats.com";
 export const FEED_URL = "https://blog.arcvats.com/feed";
 export const SUBSCRIBE_URL = "https://blog.arcvats.com/subscribe";

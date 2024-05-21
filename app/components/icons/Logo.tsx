@@ -4,7 +4,7 @@ export default function Logo(props: SVGProps<SVGSVGElement>) {
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			xmlnsXlink="http://www.w3.org/1999/xlink"
-			width="100%"
+			width="3rem"
 			height="1.1rem"
 			viewBox="74.449 207.228 500 228.443"
 			{...props}

@@ -5,34 +5,35 @@ import "./globals.css";
 
 import ThemeProvider from "./ThemeProvider";
 import Navbar from "./components/organisms/Navbar";
+import Footer from "./components/organisms/Footer";
 import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Arcvats | Home",
+	title: "Arcvats",
 	description:
 		"Welcome to the portfolio of Archit. Explore my projects, skills, and blog.",
 	keywords: "archit, arcvats, portfolio, blog, projects, skills",
 	authors: [{ name: "Archit", url: "https://arcvats.com" }],
-	// openGraph: {
-	// 	title: "Arcvats | Home",
-	// 	description:
-	// 		"Welcome to the portfolio of Archit. Explore my projects, skills, and blog.",
-	// 	images: {
-	// 		url: "https://arcvats.com/og-image.png",
-	// 		alt: "Arcvats",
-	// 	},
-	// },
-	// twitter: {
-	// 	title: "Arcvats | Home",
-	// 	description:
-	// 		"Welcome to the portfolio of Archit. Explore my projects, skills, and blog.",
-	// 	images: {
-	// 		url: "https://arcvats.com/og-image.png",
-	// 		alt: "Arcvats",
-	// 	},
-	// },
+	openGraph: {
+		title: "Arcvats",
+		description:
+			"Welcome to the portfolio of Archit. Explore my projects, skills, and blog.",
+		images: {
+			url: "/profile.jpg",
+			alt: "Arcvats",
+		},
+	},
+	twitter: {
+		title: "Arcvats",
+		description:
+			"Welcome to the portfolio of Archit. Explore my projects, skills, and blog.",
+		images: {
+			url: "/profile.jpg",
+			alt: "Arcvats",
+		},
+	},
 };
 
 export default function RootLayout({
@@ -51,6 +52,7 @@ export default function RootLayout({
 						<main className="p-6 mx-auto max-w-7xl relative top-10">
 							{children}
 						</main>
+						<Footer />
 					</ThemeProvider>
 				</Suspense>
 			</body>
