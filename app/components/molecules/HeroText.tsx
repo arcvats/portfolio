@@ -5,7 +5,7 @@ export default function HeroText() {
         Hey,
       </h1>
       <h2 className="text-base sm:text-xl mt-1 sm:mt-4">
-        I&apos;m Archit, a software engineer, blogger and an amateur poet with a
+        I&apos;m Archit, a software engineer, blogger and amateur poet with a
         profound passion for problem-solving, continuous learning, and teaching.
         With years of hands-on experience and a relentless drive of curiosity, I
         aim to share insights, tips, and reflections on navigating the
