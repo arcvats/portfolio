@@ -17,7 +17,7 @@ export const SOCIAL_ICONS = [
   {
     url: "https://github.com/arcvats",
     icon: "github",
-    size: 24
+    size: 24,
   },
   {
     url: "https://x.com/arcvats",
@@ -27,23 +27,30 @@ export const SOCIAL_ICONS = [
   {
     url: "https://www.linkedin.com/in/arcvats",
     icon: "linkedin",
-    size: 24
+    size: 24,
   },
   {
     url: "https://blog.arcvats.com",
     icon: "medium",
-    size: 24
-  }
+    size: 24,
+  },
 ];
 
 export const WORK_EXPERIENCE = [
   {
-    title: "Software Engineer",
-    company: "PayU Payments",
-    duration: "2016 - 2016",
+    title: "Staff Software Engineer",
+    company: "Employ",
+    duration: "2020 - Present",
     description: "NA",
-    logoUrl: "/payu.png",
-    backgroundColor: "bg-black"
+    logoUrl: "/employ.jpeg",
+    padding: "p-0",
+  },
+  {
+    title: "Software Engineer",
+    company: "ApplyBoard",
+    duration: "2019 - 2020",
+    description: "NA",
+    logoUrl: "/applyboard_cap.png",
   },
   {
     title: "Node.js Developer",
@@ -51,21 +58,15 @@ export const WORK_EXPERIENCE = [
     duration: "2018 - 2018",
     description: "NA",
     logoUrl: "/justplay.png",
-    backgroundColor: "bg-black"
+    backgroundColor: "bg-black",
   },
   {
     title: "Software Engineer",
-    company: "ApplyBoard",
-    duration: "2019 - 2020",
+    company: "PayU Payments",
+    duration: "2016 - 2016",
     description: "NA",
-    logoUrl: "/applyboard.png",
-  },
-  {
-    title: "Lead Soft. Engineer",
-    company: "Jobvite",
-    duration: "2020 - Present",
-    description: "NA",
-    logoUrl: "/jobvite.png",
+    logoUrl: "/payu.png",
+    backgroundColor: "bg-black",
   },
 ];
 
@@ -118,7 +119,7 @@ export const PROJECTS = [
     logoType: "github",
     url: "https://github.com/arcvats/zobun-ui",
     hasImage: false,
-  }
+  },
 ];
 
 export const PROFILE_IMAGE = "/profile.jpg";
