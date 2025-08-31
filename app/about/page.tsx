@@ -3,7 +3,6 @@ import Image from "next/image";
 import {
   WORK_EXPERIENCE,
   SOCIAL_ICONS,
-  BLOG_URL,
   IMAGE_WITH_ATTR,
   PROFILE_IMAGE,
 } from "../lib/consts";
@@ -16,7 +15,7 @@ function getSocialLink(icon: string) {
 export default function About() {
   const lastExperience = WORK_EXPERIENCE[0];
   return (
-    <div className="flex">
+    <div className="flex mt-11">
       <div className="sm:w-1/2 w-full">
         <div className="flex justify-normal mt-2">
           <Image
@@ -28,8 +27,8 @@ export default function About() {
             priority={true}
           />
         </div>
-        <h2 className="text-sm sm:text-base mt-1 sm:mt-2">
-          <b>
+        <h2 className="text-sm sm:text-base mt-2 sm:mt-2">
+          <b className="font-bold text-lg">
             Archit is a {lastExperience.title} at {lastExperience.company}
           </b>
           .
@@ -48,14 +47,6 @@ export default function About() {
           he loves playing guitar, doing yoga, meditation, poetry and reading.
         </h2>
         <h3 className="italic text-xs sm:text-base mt-2">
-          Read my blog at{" "}
-          <Link href={BLOG_URL} target="_blank" rel="noopener noreferrer">
-            <span className="font-bold underline">
-              {BLOG_URL.replace("https://", "")}
-            </span>
-            .
-          </Link>
-          <br />
           For networking and project updates, connect with me on{" "}
           <Link
             href={getSocialLink("linkedin")}
