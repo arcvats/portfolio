@@ -9,8 +9,6 @@ export default function Projects() {
   return (
     <div className="block my-2 rounded-lg bg-neutral-300/20 p-2 text-surface shadow-secondary-1 dark:border-neutral-300/10 dark:border-2 dark:bg-transparent dark:text-white">
       <h2 className="inline-flex items-center px-2 py-1 text-lg font-semibold">
-        {/* {iconFactory("project", 24)}
-				<span className="font-bold ml-2">Projects</span> */}
         Projects
       </h2>
       {projectChunks.map((chunk) => {
