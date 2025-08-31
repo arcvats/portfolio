@@ -50,42 +50,44 @@ import Down from "./DownIcon";
 export const DownIcon = Down;
 
 export const iconFactory = (name: string, size?: number | string) => {
-	switch (name) {
-		case "moon":
-			return <MoonIcon size={size} />;
-		case "sun":
-			return <SunIcon size={size} />;
-		case "logo":
-			return <LogoIcon />;
-		case "menu":
-			return <MenuIcon size={size} />;
-		case "github":
-			return <GithubIcon size={size} />;
-		case "twitter":
-			return <TwitterIcon size={size} />;
-		case "linkedin":
-			return <LinkedInIcon size={size} />;
-		case "hashnode":
-			return <HashNodeIcon size={size} />;
-		case "download":
-			return <DownloadIcon size={size} />;
-		case "work":
-			return <WorkIcon size={size} />;
-		case "project":
-			return <ProjectIcon size={size} />;
-		case "npm":
-			return <NpmIcon size={size} />;
-		case "go":
-			return <GoIcon size={size} />;
-		case "medium":
-			return <MediumIcon size={size} />;
-		case "arrow-right-up":
-			return <ArrowRightUpIcon size={size} />;
-		case "rss":
-			return <RssIcon size={size} />;
-		case "down":
-			return <DownIcon size={size} />;
-		default:
-			return null;
-	}
+  switch (name) {
+    case "moon":
+      return <MoonIcon size={size} />;
+    case "sun":
+      return <SunIcon size={size} />;
+    case "logo":
+      return <LogoIcon />;
+    case "menu":
+      return <MenuIcon size={size} />;
+    case "github":
+      return <GithubIcon size={size} />;
+    case "twitter":
+      return <TwitterIcon size={size} />;
+    case "x":
+      return <TwitterIcon size={size} />;
+    case "linkedin":
+      return <LinkedInIcon size={size} />;
+    case "hashnode":
+      return <HashNodeIcon size={size} />;
+    case "download":
+      return <DownloadIcon size={size} />;
+    case "work":
+      return <WorkIcon size={size} />;
+    case "project":
+      return <ProjectIcon size={size} />;
+    case "npm":
+      return <NpmIcon size={size} />;
+    case "go":
+      return <GoIcon size={size} />;
+    case "medium":
+      return <MediumIcon size={size} />;
+    case "arrow-right-up":
+      return <ArrowRightUpIcon size={size} />;
+    case "rss":
+      return <RssIcon size={size} />;
+    case "down":
+      return <DownIcon size={size} />;
+    default:
+      return null;
+  }
 };

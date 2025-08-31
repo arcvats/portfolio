@@ -1,3 +1,6 @@
+import { SOCIAL_ICONS } from "@/app/lib/consts";
+import IconSet from "./IconSet";
+
 export default function HeroText() {
   return (
     <div className="w-full">
@@ -19,6 +22,9 @@ export default function HeroText() {
           Let&apos;s build a brighter future together, one byte at a time.
         </span>
       </h2>
+      <div className="mt-4">
+        <IconSet set={SOCIAL_ICONS} hasText={true} hasHover={true} />
+      </div>
     </div>
   );
 }

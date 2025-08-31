@@ -4,13 +4,13 @@ export const NAVIGATION = [
     text: "Home",
   },
   {
-    href: "https://blog.arcvats.com",
+    href: "/blog",
     text: "Blog",
   },
-  {
-    href: "/about",
-    text: "About",
-  },
+  // {
+  //   href: "/about",
+  //   text: "About",
+  // },
 ];
 
 export const SOCIAL_ICONS = [
@@ -21,7 +21,7 @@ export const SOCIAL_ICONS = [
   },
   {
     url: "https://x.com/arcvats",
-    icon: "twitter",
+    icon: "x",
     size: 21,
   },
   {
